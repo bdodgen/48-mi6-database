@@ -1,7 +1,9 @@
 const App = () => {
+    // this is how the React application reads from the blade WHAT id it should fetch the data for
+    const personId = document.querySelector('input[name="person_id"]').value
     return (
         <div id="returned-app-component">
-            <h1>Application displaying the details of one user</h1>
+            <h2>The ID of the we want the details of person is {personId}</h2>
         </div>
     )
 }
