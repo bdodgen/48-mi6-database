@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Noto+Serif+Display:wght@200;400;700&display=swap');
+
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    color: white;
+}
+
+div.content {
+    background-color: #2B5554;
+    background-image: url("/public/images/mi6-seal-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: 'Noto Serif Display';
+    flex-grow: 1;
+}
+
+div.nav-bar {
+    background-color: #163838;
+    font-family: 'Cutive Mono';
+    height: 100vh;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 1s;
+}
+
+.nav-bar p {
+    width: 100%;
+    margin-left: 2rem;
+}
+
+#react-app {
+    height: 100%;
+}
+
+#returned-app-component {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seal {
+    width: 10rem;
+    margin: 0 auto;
+}
+
+.visibility-toggle {
+    position: absolute;
+    top: 5rem;
+    left: 20rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2.5rem;
+    text-align: center;
+    background-color: #163838;
+    transition: 1s;
+}
+
+.nav-bar.hidden {
+    width: 0;
+}
+
+.nav-bar.hidden .visibility-toggle {
+    left: 0;
+}
