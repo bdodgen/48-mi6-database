@@ -5,6 +5,7 @@ body {
     display: flex;
     min-height: 100vh;
     color: white;
+    background-color: #163838;
 }
 
 div.content {
@@ -15,6 +16,7 @@ div.content {
     background-size: contain;
     font-family: 'Noto Serif Display';
     flex-grow: 1;
+    padding-left: 3.5em;
 }
 
 div.nav-bar {
@@ -28,9 +30,11 @@ div.nav-bar {
     transition: 1s;
 }
 
-.nav-bar p {
+.nav-bar a {
     width: 100%;
     margin-left: 2rem;
+    text-decoration: none;
+    color: white;
 }
 
 #react-app {
@@ -42,6 +46,7 @@ div.nav-bar {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .seal {
@@ -59,6 +64,7 @@ div.nav-bar {
     text-align: center;
     background-color: #163838;
     transition: 1s;
+    cursor: pointer;
 }
 
 .nav-bar.hidden {
@@ -67,4 +73,8 @@ div.nav-bar {
 
 .nav-bar.hidden .visibility-toggle {
     left: 0;
+}
+
+.status-filter__status_selected {
+    background-color: magenta;
 }

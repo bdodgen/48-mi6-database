@@ -1,7 +1,15 @@
+import PeopleList from "./PeopleList"
+import { useState } from "react";
+import StatusFilter from "./StatusFilter";
+
 const App = () => {
+    const [people, setPeople] = useState([]);
+    const [selectedStatus, setSelectedStatus] = useState('');
+
     return (
         <div id="returned-app-component">
-            <h1>Application displaying the list (with search later)</h1>
+            <StatusFilter selectedStatus={selectedStatus} setSelectedStatus={setSelectedStatus}/>
+            <PeopleList people={people} setPeople={setPeople} selectedStatus={selectedStatus}/>
         </div>
     )
 }

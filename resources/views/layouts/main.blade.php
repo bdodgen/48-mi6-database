@@ -11,8 +11,8 @@
 <body>
     <div class="nav-bar">
         <img class="seal" src="/images/mi6-seal.png" alt="">
-        <p>Home</p>
-        <p>People of Interest</p>
+        <a href='/'>Home</a>
+        <a href="{{route('people')}}">People of Interest</a>
         <div class="visibility-toggle">&lt;</div>
     </div>
     <div class="content">
