@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 
 const PeopleList = ({people, setPeople, selectedStatus}) => {
 
     const loadPeople = async () => {
-        const response = await fetch('http://dev.mi6.com/api/people?status=' + encodeURIComponent(selectedStatus));
+        const response = await fetch('/api/people?status=' + encodeURIComponent(selectedStatus));
         const data = await response.json();
 
         console.log(data);

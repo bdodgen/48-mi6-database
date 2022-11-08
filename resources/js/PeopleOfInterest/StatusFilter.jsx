@@ -7,12 +7,12 @@ const StatusFilter = ({selectedStatus, setSelectedStatus}) => {
 
     const loadStatuses = async () => {
         // Getting data with fetch:
-        // const response = await fetch('http://dev.mi6.com/api/statuses');
+        // const response = await fetch('/api/statuses');
         // const data = await response.json();
 
         // Getting data with axios
         try {
-            const response = await axios.get('http://dev.mi6.com/api/statuses');
+            const response = await axios.get('/api/statuses');
             setStatuses(response.data);
         } catch (err) {
             console.log(err);

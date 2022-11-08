@@ -12,12 +12,12 @@ const MissionEditForm = () => {
     });
 
     const loadMission = async () => {
-        const response = await axios.get('http://dev.mi6.com/api/mission/'+id);
+        const response = await axios.get('/api/mission/'+id);
         setData(response.data);
     }
 
     const handleSubmit = async () => {
-        const response = await axios.post('http://dev.mi6.com/api/mission/store', data);
+        const response = await axios.post('/api/mission/store', data);
 
         console.log(response.status);
     }
@@ -25,10 +25,10 @@ const MissionEditForm = () => {
     useEffect(() => {
         loadMission();
     }, []);
- 
+
     const handleChange = (event) => {
         setData(previous_values => {
-            return ({...previous_values, 
+            return ({...previous_values,
                 [event.target.name]: event.target.value
             });
         });
@@ -36,18 +36,18 @@ const MissionEditForm = () => {
 
     return (
         <form action="" method="post">
- 
+
             <input type="text" name="name" value={ data.name } onChange={ handleChange } />
             <input type="number" name="year" value={ data.year } onChange={ handleChange } />
             <select name="outcome">
                 <option value={null} selected={data.outcome == null ? true : false}>Not known</option>
                 <option value={true} selected={data.outcome == 1 ? true : false}>Success</option>
                 <option value={false} selected={data.outcome == 0 ? true : false}>Failure</option>
-            </select> 
+            </select>
 
             <button onClick={(e)=> {
-                e.preventDefault();  
-                handleSubmit();              
+                e.preventDefault();
+                handleSubmit();
             }}>SUBMIT</button>
         </form>
     )
