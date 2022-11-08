@@ -18,4 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/people-of-interest', [App\Http\Controllers\PeopleController::class, 'index'])->name('people');
-Route::get('/people-of-interest/{id}', [App\Http\Controllers\PeopleController::class, 'show']);
+Route::get('/mission/{id}', [App\Http\Controllers\MissionController::class, 'show']);

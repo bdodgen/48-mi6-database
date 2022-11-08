@@ -13,10 +13,10 @@ class PeopleController extends Controller
         $status = $request->input('status');
 
         if ($status) {
-            $peopleOfInterest = Person::where('status_id', $status)->get();
+            $peopleOfInterest = Person::with('missions')->where('status_id', $status)->get();
         }
         else {
-            $peopleOfInterest = Person::get();
+            $peopleOfInterest = Person::with('missions')->get();
         }
 
         return $peopleOfInterest;

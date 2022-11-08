@@ -1,16 +1,17 @@
-import PeopleList from "./PeopleList"
-import { useState } from "react";
-import StatusFilter from "./StatusFilter";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import MissionEditForm from "./MissionEditForm";
+import PeoplePage from "./PeoplePage";
 
 const App = () => {
-    const [people, setPeople] = useState([]);
-    const [selectedStatus, setSelectedStatus] = useState('');
-
     return (
-        <div id="returned-app-component">
-            <StatusFilter selectedStatus={selectedStatus} setSelectedStatus={setSelectedStatus}/>
-            <PeopleList people={people} setPeople={setPeople} selectedStatus={selectedStatus}/>
-        </div>
+        <>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/people-of-interest" element={<PeoplePage />}/>
+                    <Route path="/mission/:id" element={<MissionEditForm />}/>
+                </Routes>
+            </BrowserRouter>
+        </>
     )
 }
 

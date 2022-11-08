@@ -3,8 +3,7 @@
 @section('content')
     <h3>All people of interest</h3>
     <div>
-        Name: {{$peopleOfInterest[3]->name}}
-        <a href="{{ action([App\Http\Controllers\PeopleController::class, 'show'], $peopleOfInterest[3]->id) }}">Detail</a>
+        <a href="{{ action([App\Http\Controllers\PeopleController::class, 'index']) }}">Detail</a>
     </div>
     <div id="react-app"></div>
 
