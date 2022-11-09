@@ -9,6 +9,7 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resources/css/style.css',
                 'resources/js/app.js',
+                'resources/js/missions.jsx',
                 'resources/js/people-of-interest.jsx',
                 'resources/js/person-of-interest.jsx',
             ],

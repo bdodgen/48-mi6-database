@@ -8,6 +8,10 @@ body {
     background-color: #163838;
 }
 
+a {
+    color: inherit;
+}
+
 div.content {
     background-color: #2B5554;
     background-image: url("/public/images/mi6-seal-bg.png");

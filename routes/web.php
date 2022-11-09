@@ -19,3 +19,5 @@ Route::get('/', function () {
 
 Route::get('/people-of-interest', [App\Http\Controllers\PeopleController::class, 'index'])->name('people');
 Route::get('/mission/{id}', [App\Http\Controllers\MissionController::class, 'show']);
+
+Route::view('/missions/{path?}', 'missions/app')->where('path', '.*')->name('missions.app');
